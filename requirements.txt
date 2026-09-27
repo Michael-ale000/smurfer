@@ -13,7 +13,7 @@ torch>=2.0      # dqn_agent only (CPU build is enough; the network is small)
 
 # Needed by the framework, not by the agent:
 tqdm>=4.60      # progress bar in main.py
-pygame>=2.1     # optional; the game runs headless without it
+pygame-ce>=2.5  # optional; the game runs headless without it
 
 # Development only (tests and training-curve plots):
 matplotlib>=3.5
