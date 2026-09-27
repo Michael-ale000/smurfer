@@ -1,0 +1,19 @@
+# Dependencies for the agents in agent_code.
+#
+# The tournament Dockerfile already ships numpy, scipy, matplotlib, scikit-learn,
+# tqdm and pygame, so nothing here is strictly required to run the agent -- it is
+# listed for reproducibility of a local development environment.
+#
+# my_agent imports only numpy (plus the standard library); dqn_agent additionally
+# imports torch, which the tournament Dockerfile already installs
+# (`conda install pytorch torchvision -c pytorch`), so both agents run there as-is.
+
+numpy>=1.24
+torch>=2.0      # dqn_agent only (CPU build is enough; the network is small)
+
+# Needed by the framework, not by the agent:
+tqdm>=4.60      # progress bar in main.py
+pygame>=2.1     # optional; the game runs headless without it
+
+# Development only (tests and training-curve plots):
+matplotlib>=3.5
